@@ -1,0 +1,19 @@
+# Clyde 'Thluffy' Sinclair
+# SoftDev
+# Oct 2021
+
+from flask import Flask
+app = Flask(__name__) #create instance of class Flask
+
+@app.route("/")       #assign fxn to route
+def hello_world():
+    print("about to print __name__...")
+    print(__name__)   #where will this go?
+    return "No hablo queso!"
+
+app.debug = True
+app.run()
+
+# this is the same as the last version except the debugger is set to true
+# after breaking stuff for exploration, we noticed that it doesn't really change anything if you majorly break code (random text)
+# we are confused about what the debugger actually helps with
