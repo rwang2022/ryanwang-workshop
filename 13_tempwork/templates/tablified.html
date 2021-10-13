@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Team Duck on a Rock - Jonathan W. [Loki] ,Patrick G. [Chris], Ryan W. [Jack] | Period 2
+SoftDev
+K13 - Template for Success/Jinja templates and flask/We worked in new trios to create a template to display jobs and percentages on the website as well as displaying the randomly selected job.
+2021-10-09
+-->
+<html lang="en" dir="ltr">
+
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+    td, th {
+      text-align: left;
+      padding: 8px;
+    }
+    </style>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Random Occupation Picker</title>
+    <h1>Random Occupation Picker by Team Duck on a Rock </h1>
+    <h3> This website lists all the occupations and percentages from the CSV file and then randomly selects a job to display for you. </h3>
+    <h4> Team Roster for Team Duck on a Rock (Period 2): </br>
+         Jonathan Wu [Ducky: Loki] </br>
+         Patrick Ging [Ducky: Chris] </br>
+         Ryan Wang [Ducky: Jack] </h4>
+  </head>
+
+  <body>
+    <h3>Your Randomly Selected Occupation is: </h3>
+    <h2> <u>{{chosen_job}}</u>, (probability: {{chosen_job_prob}}%) </h2>
+
+    <table>
+      <tr>
+        <th>Job</th>
+        <th>Probability</th>
+      </tr>
+      {% for job in jobs %}
+      <tr>
+        <td>{{job}}</td>
+        <td>{{data_dict[job]}}%</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+  
+</html>

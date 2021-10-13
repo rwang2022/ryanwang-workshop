@@ -1,0 +1,23 @@
+Team Duck on a Rock - Jonathan W. [Loki] ,Patrick G. [Chris], Ryan W. [Jack] | Period 2
+SoftDev
+K13 - Template for Success/Jinja templates and flask/We worked in new trios to create a
+template to display jobs and percentages on the website as well as displaying the randomly
+selected job.
+2021-10-09
+
+Anything Notable:
+
+- Nothing in particular. 
+- It's a lot cleaner at times when you can replace some disgusting code with a nice loop or a template.
+- There are already some useful library functions that are easy to read, use, and understand.
+There's no need to write a bunch of code for something that's already been done. 
+
+EGO:
+
+- I feel slightly called out by the fact that most programmers learn in the "detached"
+direction as I agree with that sentiment. Though I don't agree that I feel like
+I am attached to the programs I create.
+- I feel that the section is really accurate in its descriptions of the archetypes. In terms of owning programs, I have no comment on it. 
+- The author makes a good point. I do feel like I get too attached to my programs, sometimes.
+If I struggle on something long enough, I usually don't feel like abandoning my work, or asking people for help, even though I should.
+I just try to make it work, and this is definitely an ego thing; I want to feel like I'm good at programming. 
