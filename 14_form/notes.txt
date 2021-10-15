@@ -1,0 +1,32 @@
+Team threeCoffeePeanuts: Jesse Xie, Yaying Liang Li, Ryan Wang
+SoftDev
+K14 -- Form and Function
+2021-10-14
+
+*What does echo mean? to print what the user inputted
+**What is a request method? The 'Get' and 'Post' methods
+***Is pressing the submit button on the form the same as pressing enter on the keyboard? If so, is there any purpose in having a submit input button?
+
+Predictions:
+-When you're in default page of website ("/"), terminal prints out...
+  -app Flask object, request, the arguments of request, and the header of request
+  -request is just another module of Flask (like render_template)
+  - "Waaaa hooo...." is printed in webpage
+
+  *In authenticate, the requests won't be asked because there's no render_template(<template>)
+
+Observations:
+-When we go onto the webpage (default page), we see in the terminal information including the name of the flask object, the website that is opened, any arguments, and "heading information" is printed
+  -In the default page of the website that is accessed, there are no arguments in the arguments dictionary printed in the terminal
+  -The input of the form becomes a variable called 'username' as put in login.html
+-There was only 1 input box when we ran the "/" page - but there are two input tags <> in HTML file
+  -Removing second input line in HTML file removes the "Submit Query" button!! (can still submit using /enter/)
+  -If you click on "Submit Query" --> user is brought to /auth page (with the variables containing the arguments being present in the url)
+  -Why? Because <form action="/auth"> makes the form perform this action when the code inside <form> </form> is executed
+-Removing the ""&sub1=Submit" from the url removes ('sub1', 'Submit') from the dictionary
+  -Changing the arguments put in the url directly changes the data in the dictionary as seen in the terminal
+
+-We realized that the username inputted would be stored in request. So we used request.args['username'] to get it. 
+-It seems that for forms, the default method is "get"
+-Then, when rendering the template, we set method=request.method (which tells us the method used, "get" or "post") and username=username
+-We also wanted to have some fun with some ASCII art related to our team name, and after fiddling around a bit, we figured out that <pre> keeps the spaces in the art.
