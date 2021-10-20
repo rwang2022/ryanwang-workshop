@@ -3,7 +3,6 @@
 #K15 -- Sessions Greetings
 #2021-10-18
 
-
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
@@ -14,23 +13,26 @@ from flask import session
 
 app = Flask(__name__)    #create Flask object
 app.secret_key = "dogs say woof"
+real_user = "coffee"
+real_passwd = "peanut"
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
     # check whether or not it is already is session
-    if not session.get(username):
-        # if not, just bring to the login page
-        return render_template("login.html")
+    print("\n\n\n####### SESSION HERE #######")
+    print(session)
+    print(session.get(real_user))
+    print("####### SESSION HERE #######\n\n\n")
+
+    if not session.get(real_user):
+        return render_template('login.html')
     else:
-        # if it is, bring to the logged-in page (response.html)
-        return render_template("response.html")
+        return render_template("response.html", username=real_user)
 
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
     #hard coding single username and password
-    real_user = "coffee"
-    real_passwd = "peanut"
 
     print(session)
     
@@ -60,6 +62,11 @@ def authenticate():
         return render_template( 'login.html', error=error)
     
 
+@app.route("/logout") # , methods=['GET', 'POST'])
+def logout():
+    if real_user in session:
+        session.pop(real_user)
+    return render_template('login.html')
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
