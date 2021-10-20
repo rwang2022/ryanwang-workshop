@@ -22,15 +22,11 @@ real_passwd = "peanut"
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
-    # check whether or not it is already is session
-    print("\n\n\n####### SESSION HERE #######")
-    print(session)
-    print(session.get(real_user))
-    print("####### SESSION HERE #######\n\n\n")
-
     if not session.get(real_user):
+        # if session doesn't have the correct login info, i.e. you are not signed in
         return render_template('login.html')
     else:
+        # if you are signed in, go to signed-in page
         return render_template("response.html", username=real_user)
 
 
@@ -59,12 +55,11 @@ def authenticate():
     else:
         error = "Error: that username does not exist"
         return render_template( 'login.html', error=error)
-    
 
 @app.route("/logout") # , methods=['GET', 'POST'])
 def logout():
-    if real_user in session:
-        session.pop(real_user)
+    # if real_user in session:
+    session.pop(real_user)
     return render_template('login.html')
 
 if __name__ == "__main__": #false if this file imported as module
