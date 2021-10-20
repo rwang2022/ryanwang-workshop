@@ -12,7 +12,11 @@ from flask import session
 #from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
+
+# do a better secret_key later
 app.secret_key = "dogs say woof"
+
+#hard coding single username and password
 real_user = "coffee"
 real_passwd = "peanut"
 
@@ -32,9 +36,6 @@ def disp_loginpage():
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
-    #hard coding single username and password
-
-    print(session)
     
     # using conditional in order to make GET/POST fail-safe
     if request.method == "GET":
@@ -43,12 +44,10 @@ def authenticate():
     elif request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-    
-    session[username] = password
-    print(session)
 
     # if username and password are a correct pair, we send them to response.html (logs you in)
     if (username == real_user and password == real_passwd):
+        session[username] = password
         return render_template('response.html', method=request.method, username=username)
     
     # login failed because of wrong pass, tells you error at the bottom (at login.html)
