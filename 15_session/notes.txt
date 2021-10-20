@@ -2,3 +2,17 @@ Team threeCoffeePeanuts: Jesse Xie, Yaying Liang Li, Ryan Wang
 SoftDev
 K15 -- Sessions Greetings
 2021-10-18
+
+Notes:
+-Control + Shift + J: opens web console
+-Conditionals are less cost-efficient than error-handling; use conditionals to see which method was used, and thus respond accordingly (if request.method == "get")
+
+-username: threeCoffeePeanuts
+-password: oneWalnutLatte
+
+Discoveries:
+**When we're in our local site, web console displays request.obj (with /favicon), and the method, and has the heading information
+-(Tentative) Have 3 functions in app.py that correspond to 1) input username + password page, 2) username/pass is incorrect page (failed), 3) username + pass is correct page (works)
+-1 submit button total for username + password
+-Use separate elif statements so we know which error messages to give out
+
