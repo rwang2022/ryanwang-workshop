@@ -1,0 +1,45 @@
+body {
+    background-color:grey; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align:center;
+    color: white; 
+    background-color:darkgrey;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    position: relative; 
+    left: 200px; 
+    bottom: 125px;
+    max-width: 60ch;
+}
+
+p {
+    position: relative; 
+    left: 200px; 
+    bottom: 125px;
+    max-width: 85ch;
+}
+
+br {
+    width = 1px;
+}
+
+.foot {
+    text-align: right; 
+    background-color:#585454; 
+    padding:10px; 
+    color: grey;
+}
