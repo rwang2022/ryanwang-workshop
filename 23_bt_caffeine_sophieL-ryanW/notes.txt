@@ -1,0 +1,15 @@
+Team Caffeine: Sophie Liu, Ryan Wang
+SoftDev
+K23: No. 2?
+2021-12-01
+
+
+The main benefit of bootstrap and foundations is the resizing ability. This makes formatting webpages much easier and human-friendly.
+
+DISCO:
+  It's a lot easier to color background elements different colors in Bootstrap.
+QCC:
+  Images? 
+Q0:
+
+Q1:
